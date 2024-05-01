@@ -1,5 +1,5 @@
 {
-    "name": "Remote Bot (Main)",
+    "name": "Microbit - Remote Control",
     "description": "",
     "dependencies": {
         "core": "*",
