@@ -26,7 +26,18 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 3) {
         basic.showIcon(IconNames.Heart)
         music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.UntilDone)
+        servos.P0.stop()
+        servos.P2.stop()
     }
+})
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(1)
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendNumber(2)
+})
+input.onGesture(Gesture.Shake, function () {
+    radio.sendNumber(3)
 })
 radio.setGroup(1)
 basic.forever(function () {
